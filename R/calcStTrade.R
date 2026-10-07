@@ -51,9 +51,9 @@ calcStTrade <- function(
   target_years = NULL
 ) {
   if (category == "indirect") {
-    note <- "dimensions: (Historic Time,Region,Good,value)"
+    note <- "dimensions: (Historical Time,Region,End Use,value)"
   } else {
-    note <- "dimensions: (Historic Time,Region,value)"
+    note <- "dimensions: (Historical Time,Region,value)"
   }
 
   # Read World Steel trade data
