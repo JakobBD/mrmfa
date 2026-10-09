@@ -60,7 +60,7 @@ calcStTrade <- function(
   # map category
   subtype_WS <- switch(category,
     "manufactured" = paste0("indirect", stringr::str_to_title(subtype)),
-    "scrap" = paste0(category, stringr::str_to_title(subtype)),
+    "scrap" = paste0("scrap", stringr::str_to_title(subtype)),
     "steel" = subtype,
     stop("Unsupported category: ", category)
   )
@@ -93,7 +93,13 @@ calcStTrade <- function(
       ungroup()
 
     # Read raw BACI data
-    weights <- readSource("BACI", subtype = paste("steel", category, sep = "-"), subset = HS) %>%
+    subtype_BACI <- switch(category,
+      "manufactured" = "indirect",
+      "scrap" = "scrap",
+      "steel" = "direct",
+      stop("Unsupported category: ", category)
+    )
+    weights <- readSource("BACI", subtype = paste("steel", subtype_BACI, sep = "-"), subset = HS) %>%
       quitte::madrat_mule() %>%
       rename(
         "Region" = case_when(subtype == "imports" ~ "importer", subtype == "exports" ~ "exporter"),
