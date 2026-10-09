@@ -8,7 +8,7 @@ calcStTradeWorldsteel(subtype = "imports")
 }
 \arguments{
 \item{subtype}{Type of trade data to retrieve. Options: "imports", "exports",
-"scrapImports", "scrapExports", "indirectImports", "indirectExports"}
+"scrapImports", "scrapExports", "manufacturedProductsImports", "manufacturedProductsExports"}
 }
 \value{
 Steel trade across all regions from 1900-2022 as magpie within
