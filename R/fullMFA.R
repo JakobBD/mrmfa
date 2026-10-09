@@ -68,8 +68,8 @@ fullMFA <- function(rev = 0,
     calcOutput("StLifetimes", subtype = "Cooper2014", unit = "mean", file = "st_lifetime_mean.cs4r", aggregate = FALSE)
     calcOutput("StLifetimes", subtype = "Cooper2014", unit = "std", file = "st_lifetime_std.cs4r", aggregate = FALSE)
     calcOutput("StRecoveryRate", subtype = "WorldSteel", file = "st_recovery_rate.cs4r", aggregate = FALSE)
-    calcOutput("StSectorSplits", subtype = "high", file = "st_end_use_split_high.cs4r", aggregate = FALSE)
-    calcOutput("StSectorSplits", subtype = "low", file = "st_end_use_split_low.cs4r", aggregate = FALSE)
+    calcOutput("StSectorSplits", subtype = "high", file = "st_end_use_split_high_inco.cs4r", aggregate = FALSE)
+    calcOutput("StSectorSplits", subtype = "low", file = "st_end_use_split_low_inco.cs4r", aggregate = FALSE)
 
     # Static Parameters
     # calcOutput("StMaxScrapShare", subtype = "BIR", file = "st_max_scrap_share.cs4r", aggregate = FALSE)
