@@ -68,8 +68,8 @@ fullMFA <- function(rev = 0,
     calcOutput("StLifetimes", subtype = "Cooper2014", unit = "mean", file = "st_lifetime_mean.cs4r", aggregate = FALSE)
     calcOutput("StLifetimes", subtype = "Cooper2014", unit = "std", file = "st_lifetime_std.cs4r", aggregate = FALSE)
     calcOutput("StRecoveryRate", subtype = "WorldSteel", file = "st_recovery_rate.cs4r", aggregate = FALSE)
-    calcOutput("StSectorSplits", subtype = "high", file = "st_sector_split_high.cs4r", aggregate = FALSE)
-    calcOutput("StSectorSplits", subtype = "low", file = "st_sector_split_low.cs4r", aggregate = FALSE)
+    calcOutput("StSectorSplits", subtype = "high", file = "st_end_use_split_high.cs4r", aggregate = FALSE)
+    calcOutput("StSectorSplits", subtype = "low", file = "st_end_use_split_low.cs4r", aggregate = FALSE)
 
     # Static Parameters
     # calcOutput("StMaxScrapShare", subtype = "BIR", file = "st_max_scrap_share.cs4r", aggregate = FALSE)
@@ -153,7 +153,7 @@ fullMFA <- function(rev = 0,
     # Production
     calcOutput("PlProduction", file = "pl_production.cs4r", years = start_historical:end_historical)
     # Consumption
-    calcOutput("PlSectorPolymerSplit", file = "pl_sector_polymer_split.cs4r", target_years = start_historical:end_historical)
+    calcOutput("PlSectorPolymerSplit", file = "pl_end_use_polymer_split.cs4r", target_years = start_historical:end_historical)
     # Trade
     calcOutput("PlTrade", category = "Application", flow_label = "Exports", data_source = "BACI_UNEP", file = "pl_manufactured_products_exports.cs4r", target_years = start_historical:end_historical)
     calcOutput("PlTrade", category = "Application", flow_label = "Imports", data_source = "BACI_UNEP", file = "pl_manufactured_products_imports.cs4r", target_years = start_historical:end_historical)
